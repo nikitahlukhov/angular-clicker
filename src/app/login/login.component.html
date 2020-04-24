@@ -1,0 +1,8 @@
+<div>
+  <h1>Hello Dear Stranger!</h1>
+  <label for="userName">Enter Your Name Please</label>
+  <br>
+  <input type="text" id="userName" #inputName>
+  <br>
+  <button (click)="saveName(inputName.value)" >Submit</button>
+</div>

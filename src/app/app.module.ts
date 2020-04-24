@@ -3,12 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NameFormComponent } from './name-form/name-form.component';
+import { GameComponent } from './game/game.component';
+import { LoginComponent } from './login/login.component';
+import { StartButtonComponent } from './start-button/start-button.component';
+import { ResultComponent } from './result/result.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NameFormComponent
+    GameComponent,
+    LoginComponent,
+    StartButtonComponent,
+    ResultComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
