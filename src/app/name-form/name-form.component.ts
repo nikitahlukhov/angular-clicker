@@ -17,9 +17,14 @@ export class NameFormComponent {
 
 
   saveName(value) {
-    this.userName = value;
-    this.nameFormVisible = !this.nameFormVisible;
-    this.startButtonVisible = !this.startButtonVisible;
+    if (value) {
+      console.log(value)
+      this.userName = value;
+      this.nameFormVisible = !this.nameFormVisible;
+      this.startButtonVisible = !this.startButtonVisible;
+      return
+    }
+    alert('Please fill in the name form')
   }
 
   startTimer () {
@@ -27,10 +32,8 @@ export class NameFormComponent {
     this.counterFormVisible = !this.counterFormVisible;
     var x = setInterval(() => {
     
-      // Find the distance between now and the count down date
       this.countDownTime -= 1;
-      console.log(this.countDownTime)
-      // If the count down is finished, write some text
+      
       if (this.countDownTime == 0) {
         clearInterval(x);
         this.resultMessage = `Congratulations ${this.userName} you clicked ${this.counter} times`;
